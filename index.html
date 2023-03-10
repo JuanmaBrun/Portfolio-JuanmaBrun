@@ -86,6 +86,10 @@
         <a class="nav-link" href="#SobreMi">Sobre Mi</a>
         <a class="nav-link" href="#Portfolio">Portfolio</a>
         <a class="nav-link" href="#Contacto">Contacto</a>
+
+        <button class="btn bg-primary" id="Boton1"></button>
+        <button class="btn bg-dark" id="Boton2"></button>
+        <button class="btn bg-success" id="Boton3"></button>
       </div>
     </nav>
     <div
@@ -114,7 +118,7 @@
     <div id="SobreMi" class="container-fluid bg-danger">
       <h2 class="text-center">Sobre Mi</h2>
       <div class="row">
-        <div class="card col-sm-4" data-aos="zoom-in-up">
+        <div class="card col-sm-4 bg-custom" data-aos="zoom-in-up">
           <div class="card-header bg-primary text-center">Estudios</div>
           <div class="card-body">
             <h5 class="card-title">
@@ -130,7 +134,7 @@
           </div>
         </div>
 
-        <div class="card col sm-4" data-aos="zoom-in-up">
+        <div class="card col sm-4 bg-custom" data-aos="zoom-in-up">
           <div class="card-header bg-success text-center">Trabajos</div>
           <div class="card-body">
             <h5 class="card-title">
@@ -145,7 +149,7 @@
           </div>
         </div>
 
-        <div class="card col-sm-4" data-aos="zoom-in-up">
+        <div class="card col-sm-4 bg-custom" data-aos="zoom-in-up">
           <div class="card-header bg-info text-center">Idiomas</div>
           <div class="card-body">
             <h5 class="card-title">B2 de Inglés de Cambridge University</h5>
@@ -159,7 +163,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="card col-sm-6" data-aos="zoom-in-up">
+        <div class="card col-sm-6 bg-custom" data-aos="zoom-in-up">
           <div class="card-header bg-secondary text-center">
             Lenguajes de Programación
           </div>
@@ -173,7 +177,7 @@
             </p>
           </div>
         </div>
-        <div class="card col-sm-6" data-aos="zoom-in-up">
+        <div class="card col-sm-6 bg-custom" data-aos="zoom-in-up">
           <div class="card-header bg-warning text-center">Herramientas</div>
           <div class="card-body">
             <h5 class="card-title">
@@ -196,7 +200,7 @@
       data-aos="fade-down"
     >
       <h2>Mi portfolio</h2>
-      <div id="form-select" class="bg-light">
+      <div id="form-select">
         <select
           class="form-select border border-dark border-1 bg-custom"
           aria-label="Default select example"
@@ -209,7 +213,7 @@
         </select>
       </div>
       <div id="Contenedor_Cartas" class="card-group">
-        <div class="card bg-light">
+        <div class="card bg-danger">
           <div class="card-body">
             <h5 class="card-title">Portfolio</h5>
             <p class="card-text">
@@ -224,7 +228,7 @@
             <span class="javascript">Javascript</span>
           </div>
         </div>
-        <div class="card bg-light">
+        <div class="card bg-danger">
           <div class="card-body">
             <h5 class="card-title">GoGiving</h5>
             <p class="card-text">
@@ -237,7 +241,7 @@
             <span class="css">CSS</span>
           </div>
         </div>
-        <div class="card bg-light">
+        <div class="card bg-danger">
           <div class="card-body">
             <h5 class="card-title">TiendaMuebles</h5>
             <p class="card-text">
@@ -266,7 +270,7 @@
           <label for="subject">Asunto</label>
           <input
             type="text"
-            class="form-control"
+            class="form-control bg-danger"
             id="subject"
             placeholder="Asunto"
           />
@@ -275,7 +279,7 @@
           <label for="cc">Email address</label>
           <input
             type="email"
-            class="form-control"
+            class="form-control bg-danger"
             id="cc"
             placeholder="name@example.com"
           />
@@ -283,7 +287,7 @@
         <div class="form-group">
           <label for="body">Example textarea</label>
           <textarea
-            class="form-control"
+            class="form-control bg-danger"
             id="body"
             rows="3"
             placeholder="Tu mensaje aqui..."
