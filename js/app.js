@@ -114,3 +114,66 @@ select.addEventListener("change", function () {
     }
   }
 });
+
+//Focus Input
+
+const form = document.querySelector("form");
+const inputAsunto = document.getElementById("subject");
+const inputCc = document.getElementById("cc");
+const inputCuerpo = document.getElementById("bodytext");
+const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+form.addEventListener("submit", function (event) {
+  if (!form.checkValidity()) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  validarAsunto();
+  validarCc();
+  validarCuerpo();
+  form.classList.add("was-validated");
+});
+
+inputAsunto.addEventListener("blur", validarAsunto);
+inputCc.addEventListener("blur", validarCc);
+inputCuerpo.addEventListener("blur", validarCuerpo);
+
+function validarAsunto() {
+  const valor = inputAsunto.value.trim();
+  const errorElement = inputAsunto.nextElementSibling;
+
+  if (valor === "") {
+    inputAsunto.classList.add("is-invalid");
+    errorElement.innerText = "El asunto no puede estar vacío.";
+  } else {
+    inputAsunto.classList.remove("is-invalid");
+    errorElement.innerText = "";
+  }
+}
+
+function validarCc() {
+  const valor = inputCc.value.trim();
+  const errorElement = inputCc.nextElementSibling;
+
+  if (!valor.match(correoRegex)) {
+    inputCc.classList.add("is-invalid");
+    errorElement.innerText = "El correo no es válido.";
+  } else {
+    inputCc.classList.remove("is-invalid");
+    errorElement.innerText = "";
+  }
+}
+
+function validarCuerpo() {
+  const valor = inputCuerpo.value.trim();
+  const errorElement = inputCuerpo.nextElementSibling;
+
+  if (valor === "") {
+    inputCuerpo.classList.add("is-invalid");
+    errorElement.innerText = "El cuerpo del mensaje no puede estar vacío.";
+  } else {
+    inputCuerpo.classList.remove("is-invalid");
+    errorElement.innerText = "";
+  }
+}
