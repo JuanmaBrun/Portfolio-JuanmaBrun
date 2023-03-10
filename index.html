@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <!-- Para cambiar de modo oscuro "dark" a modo normal, simplemente cambiarlo por "light"-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Proyecto Portfolio para Marcas y Sistemas"
+    />
+    <meta
+      name="keywords"
+      content="html, css, bootstrap, js, portfolio, proyectos"
+    />
+    <meta name="language" content="EN" />
+    <meta name="author" content="juanmanuel.brun@a.vedrunasevillasj.es" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revised" content="Sunday, February 19th, 2023, 01:00pm" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge, chrome1" />
+
+    <!-- Añado la fuente Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!--AOS animations-->
+    <!--Probando estas animaciones me di cuenta que cuando usaba animaciones que hacian movimimientos horizontales los divs se jodian y no ocupaban
+    el 100% del width en modo movil. Con las animaciones que estoy usando ahora no me ha dado mas ese problema pero si al probar si se ve correctamente
+    todo en el modo movil ves que algun div es más pequeño de lo normal es por culpa de estas animaciones si desactivas el script deberia verse correctamente.
+    Te lo escribo porque a mi ya no me está dando problemas pero no se si los va a dar en otro ordenador.-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- My css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- My scripts -->
+    <script type="text/javascript" src="js/app.js" defer></script>
+
+    <!-- Icono al lado del titulo -->
+    <link rel="shortcut icon" href="media/icon/vedruna.jpg" type="image/xpng" />
+
+    <!-- Titulo -->
+    <title>Juanma's portfolio</title>
+  </head>
+
+  <body class="text-dark flex">
+    <!--Navegador sacado de bootstrap posición fixed top background azul un icono de primer.style y links a las distintas secciones-->
+    <nav
+      id="navbar"
+      class="navbar fixed-top bg-danger border border-dark text-dark"
+    >
+      <div class="container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          color="red"
+        >
+          <path
+            d="M8.75 11a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Zm7.25.75a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 1.5 0v-3.5Z"
+          ></path>
+          <path
+            d="M9.813 1h2.437a.75.75 0 0 1 .75.75V5h6.75A2.25 2.25 0 0 1 22 7.25v5.25h1.25a.75.75 0 0 1 0 1.5H22v5.75A2.25 2.25 0 0 1 19.75 22H4.25A2.25 2.25 0 0 1 2 19.75V14H.75a.75.75 0 0 1 0-1.5H2V7.25A2.25 2.25 0 0 1 4.25 5h7.25V2.5H9.813A.75.75 0 0 1 9.812 1ZM3.5 7.25v12.5c0 .414.336.75.75.75h15.5a.75.75 0 0 0 .75-.75V7.25a.75.75 0 0 0-.75-.75H4.25a.75.75 0 0 0-.75.75Z"
+          ></path>
+        </svg>
+
+        <a class="nav-link" href="#mainSection">Inicio</a>
+        <a class="nav-link" href="#SobreMi">Sobre Mi</a>
+        <a class="nav-link" href="#Portfolio">Portfolio</a>
+        <a class="nav-link" href="#Contacto">Contacto</a>
+      </div>
+    </nav>
+    <div
+      id="mainSection"
+      class="border border-dark border-1"
+      data-aos="zoom-in-down"
+    >
+      <!--Una estructura para la sección principal sacada de https://mdbootstrap.com/docs/standard/extended/avatar/-->
+
+      <div class="card testimonial-card bg-custom">
+        <div class="card-up"></div>
+        <div class="avatar mx-auto">
+          <img src="media/img/avatar1.jpg" class="rounded-circle img-fluid" />
+        </div>
+        <div class="card-body">
+          <h1 class="text-center">Juan Manuel Brun Rodríguez</h1>
+          <hr />
+          <p class="mt-4 text-center">
+            Me llamo Juan Manuel Brun Rodríguez y soy estudiante de Desarrollo
+            de Aplicaciones Multiplataforma en el instituto Santa Joaquina de
+            Verdruna en Sevilla
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="SobreMi" class="container-fluid bg-danger">
+      <h2 class="text-center">Sobre Mi</h2>
+      <div class="row">
+        <div class="card col-sm-4" data-aos="zoom-in-up">
+          <div class="card-header bg-primary text-center">Estudios</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              Bachillerato de Humanidades y Ciencias Sociales
+            </h5>
+            <p class="card-text">
+              Completé mi educación secundaria en un programa de Bachillerato de
+              Humanidades y Ciencias Sociales, lo que me brindó una amplia base
+              de conocimientos en una variedad de disciplinas. Este programa me
+              ha ayudado a desarrollar una perspectiva amplia y
+              multidisciplinaria en mi carrera.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col sm-4" data-aos="zoom-in-up">
+          <div class="card-header bg-success text-center">Trabajos</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              Experiencia como Mozo de Almacen en Amazon
+            </h5>
+            <p class="card-text">
+              Durante un año trabajé en Amazon como Mozo de Almacen, donde
+              aprendí la importancia de trabajar en equipo, la atención al
+              detalle y la organización. También desarrollé habilidades en
+              logística y gestión de inventarios.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-sm-4" data-aos="zoom-in-up">
+          <div class="card-header bg-info text-center">Idiomas</div>
+          <div class="card-body">
+            <h5 class="card-title">B2 de Inglés de Cambridge University</h5>
+            <p class="card-text">
+              Tengo un nivel B2 de inglés certificado por la Universidad de
+              Cambridge, lo que me permite comunicarme con fluidez en este
+              idioma y trabajar en proyectos internacionales. Además, estoy en
+              proceso de obtener el C1 de Inglés.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card col-sm-6" data-aos="zoom-in-up">
+          <div class="card-header bg-secondary text-center">
+            Lenguajes de Programación
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Java, Javascript, PHP</h5>
+            <p class="card-text">
+              Estoy en proceso de aprender varios lenguajes de programación,
+              incluyendo Java, Javascript y PHP. Actualmente estoy trabajando en
+              proyectos que me permiten aplicar lo que he aprendido y seguir
+              mejorando mis habilidades en estas tecnologías.
+            </p>
+          </div>
+        </div>
+        <div class="card col-sm-6" data-aos="zoom-in-up">
+          <div class="card-header bg-warning text-center">Herramientas</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              GitHub, VisualStudioCode, Bootstrap, Postman
+            </h5>
+            <p class="card-text">
+              He trabajado con varias herramientas de desarrollo, como GitHub
+              para control de versiones, VisualStudioCode como editor de código,
+              Bootstrap para diseño web y Postman para probar y depurar APIs.
+              Estas herramientas me permitirán ser más productivo y eficiente en
+              mi trabajo como desarrollador.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="Portfolio"
+      class="bg-custom border border-dark border-1 text-center"
+      data-aos="fade-down"
+    >
+      <h2>Mi portfolio</h2>
+      <div id="form-select" class="bg-light">
+        <select
+          class="form-select border border-dark border-1 bg-custom"
+          aria-label="Default select example"
+        >
+          <option selected>Open this select menu</option>
+          <option value="html">Html</option>
+          <option value="css">Css</option>
+          <option value="bootstrap">Bootstrap</option>
+          <option value="javascript">Javascript</option>
+        </select>
+      </div>
+      <div id="Contenedor_Cartas" class="card-group">
+        <div class="card bg-light">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio</h5>
+            <p class="card-text">
+              Portfolio personal con una breve introducción y algunos ejemplos
+              de trabajos anteriores
+            </p>
+            <hr />
+            <h6 class="card-title">Tecnologías</h6>
+            <span class="html">Html</span>
+            <span class="css">CSS</span>
+            <span class="bootstrap">Bootstrap</span>
+            <span class="javascript">Javascript</span>
+          </div>
+        </div>
+        <div class="card bg-light">
+          <div class="card-body">
+            <h5 class="card-title">GoGiving</h5>
+            <p class="card-text">
+              Trabajo grupal de una web informativa sobre una beneficencia
+              sevillana.
+            </p>
+            <hr />
+            <h6 class="card-title">Tecnologías</h6>
+            <span class="html">Html</span>
+            <span class="css">CSS</span>
+          </div>
+        </div>
+        <div class="card bg-light">
+          <div class="card-body">
+            <h5 class="card-title">TiendaMuebles</h5>
+            <p class="card-text">
+              Ejercicio consistente en realizar una web sobre un comercio de
+              muebles.
+            </p>
+            <hr />
+            <h6 class="card-title">Tecnologías</h6>
+            <span class="html">Html</span>
+            <span class="css">CSS</span>
+            <span class="bootstrap">Bootstrap</span>
+            <span class="javascript">Javascript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="Contacto"
+      class="container-fluid border border-dark border-1 bg-custom"
+      data-aos="fade-up"
+    >
+      <form action="mailto:juanmanuel.brun@a.vedrunasevillasj.es" method="get">
+        <legend class="text-center mt-2">Contacto</legend>
+        <div class="form-group">
+          <label for="subject">Asunto</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            placeholder="Asunto"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cc">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="cc"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="body">Example textarea</label>
+          <textarea
+            class="form-control"
+            id="body"
+            rows="3"
+            placeholder="Tu mensaje aqui..."
+          ></textarea>
+        </div>
+        <div class="form-group row g-3 mt-2 w-25 mx-auto mb-2">
+          <input type="submit" value="send" id="send" />
+        </div>
+      </form>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
