@@ -1,0 +1,46 @@
+.bg-custom {
+  background-color: #7a81a8;
+}
+
+.testimonial-card .card-up {
+  height: 120px;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.testimonial-card .avatar {
+  width: 150px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+#form-select:has(select > option[value="html"]:checked)
+  + #Contenedor_Cartas
+  > .card
+  > .card-body
+  > .html,
+#form-select:has(select > option[value="css"]:checked)
+  + #Contenedor_Cartas
+  > .card
+  > .card-body
+  > .css,
+#form-select:has(select > option[value="bootstrap"]:checked)
+  + #Contenedor_Cartas
+  > .card
+  > .card-body
+  > .bootstrap,
+#form-select:has(select > option[value="javascript"]:checked)
+  + #Contenedor_Cartas
+  > .card
+  > .card-body
+  > .javascript {
+  color: rgb(var(--bs-warning-rgb));
+}
+img:hover {
+  cursor: default;
+  transform: rotateY(360deg);
+  transition: all 1s ease-in-out 0s;
+}
