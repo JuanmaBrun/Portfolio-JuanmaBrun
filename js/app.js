@@ -60,7 +60,7 @@ Boton2.addEventListener("click", function () {
   }
 });
 
-//Boton3 
+//Boton3
 var Boton3 = document.querySelector("#Boton3");
 
 Boton3.addEventListener("click", function () {
@@ -86,3 +86,31 @@ Boton3.addEventListener("click", function () {
   }
 });
 
+//OnChange
+
+const select = document.querySelector("#form-select select");
+const cards = document.querySelectorAll("#Contenedor_Cartas .card");
+
+select.addEventListener("change", function () {
+  const selectedClass = this.value;
+
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const spans = card.querySelectorAll("span");
+    let isVisible = false;
+
+    for (let j = 0; j < spans.length; j++) {
+      const span = spans[j];
+      if (span.classList.contains(selectedClass)) {
+        isVisible = true;
+        break;
+      }
+    }
+
+    if (isVisible) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  }
+});
